@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cenizas: Mi Vida Después del Opus Dei - Por Alberto Barrera</title>
+    <title>Cenizas: Mi vida después del Opus Dei - Por Alberto Barrera</title>
+    <meta name="description" content="Cenizas: Mi vida después del Opus Dei ofrece una historia conmovedora de sanación y reconstrucción personal tras experiencias religiosas traumáticas. Descubre un camino hacia la paz y la redefinición de tu fe.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Warm Neutrals & Hopeful Green -->
-    <!-- Application Structure Plan: Se ha diseñado una estructura de landing page lineal y narrativa. Comienza con una sección 'hero' de alto impacto para captar la atención y presentar el libro, seguida de secciones que validan los sentimientos del lector, presentan los beneficios del libro como solución, ofrecen prueba social mediante testimonios y resuelven dudas con un FAQ interactivo. Cada sección conduce lógicamente a la siguiente, construyendo un caso convincente que culmina en una llamada a la acción final, optimizando así el flujo del usuario hacia el objetivo de conversión (la compra). -->
-    <!-- Visualization & Content Choices: La información del reporte se ha estructurado en componentes de texto e imagen. El visual principal es la portada del libro, que comunica el tema central. Los beneficios se presentan en tarjetas para facilitar la lectura. Los testimonios se muestran como citas destacadas para generar confianza. Un acordeón de preguntas frecuentes (FAQ) interactivo (usando HTML <details>) resuelve objeciones sin sobrecargar la página. El objetivo es informar, persuadir y generar confianza de manera fluida y empática. -->
+    <!-- Application Structure Plan: Se ha diseñado una estructura de landing page lineal y narrativa. Comienza con una sección 'hero' de alto impacto para captar la atención y presentar el libro, seguida de una sección de contenido multimedia (video y audio) para ofrecer una inmersión inicial. Luego, secciones que validan los sentimientos del lector, presentan los beneficios del libro como solución, ofrecen prueba social mediante testimonios y resuelven dudas con un FAQ interactivo. Cada sección conduce lógicamente a la siguiente, construyendo un caso convincente que culmina en una llamada a la acción final, optimizando así el flujo del usuario hacia el objetivo de conversión (la compra). La agrupación de multimedia mejora la arquitectura de la información. Se ha añadido una opción de compra adicional en la sección final de CTA y en la barra de navegación para ofrecer más flexibilidad al usuario. -->
+    <!-- Visualization & Content Choices: La información del reporte se ha estructurado en componentes de texto e imagen. El visual principal es la portada del libro, que comunica el tema central. Los beneficios se presentan en tarjetas para facilitar la lectura. Los testimonios se muestran como citas destacadas para generar confianza. Un acordeón de preguntas frecuentes (FAQ) interactivo (usando HTML <details>) resuelve objeciones sin sobrecargar la página. El video y audio se insertan directamente para interactividad. El objetivo es informar, persuadir y generar confianza de manera fluida y empática. Se han añadido botones de compra con enlaces directos, sin el uso de SVGs. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
         h1, h2, h3 {
-            font-family: 'Lora', serif; 
+            font-family: 'Lora', serif;
         }
         .cta-button {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -55,6 +56,11 @@
             width: 100%;
             height: 100%;
         }
+        .audio-container {
+            max-width: 800px; /* Max width for the audio player */
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body class="bg-[#FDFBF8] text-[#3D3D3D]">
@@ -64,13 +70,14 @@
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <h3 class="text-xl font-bold text-[#2C3E50]">Cenizas</h3>
             <div class="hidden md:flex space-x-8">
-                <a href="#video-resena" class="text-gray-600 hover:text-[#2E7D32]">Reseña Video</a>
+                <a href="#multimedia-content" class="text-gray-600 hover:text-[#2E7D32]">Multimedia</a>
                 <a href="#beneficios" class="text-gray-600 hover:text-[#2E7D32]">Beneficios</a>
                 <a href="#testimonios" class="text-gray-600 hover:text-[#2E7D32]">Testimonios</a>
                 <a href="#faq" class="text-gray-600 hover:text-[#2E7D32]">Preguntas</a>
+                <a href="#compra-opciones" class="text-gray-600 hover:text-[#2E7D32]">Comprar</a>
             </div>
             <a href="https://payhip.com/b/r8zOE" target="_blank" class="hidden md:inline-block cta-button bg-[#2E7D32] text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-[#388E3C]">
-                Comprar Ahora
+                Comprar ahora
             </a>
         </nav>
     </header>
@@ -79,25 +86,40 @@
         <!-- Hero Section -->
         <section class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 md:pr-12 text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#2C3E50] mb-4 leading-tight">Cenizas: Mi Vida Después del Opus Dei</h1>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#2C3E50] mb-4 leading-tight">Cenizas: Mi vida después del Opus Dei</h1>
                 <p class="text-lg md:text-xl text-gray-600 mb-8">Si las dudas o la desilusión han consumido tu fe y te han dejado con cicatrices, no estás solo. Descubre una historia inspiradora sobre cómo renacer, encontrar paz y redefinir tu camino espiritual.</p>
                 <a href="https://payhip.com/b/r8zOE" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold text-lg py-4 px-8 rounded-lg shadow-xl hover:bg-[#388E3C]">
-                    Sí, ¡Quiero Mi Copia y Sanar!
+                    Sí, ¡quiero mi copia y sanar!
                 </a>
                 <p class="text-sm text-gray-500 mt-4">Compra segura a través de Payhip.</p>
             </div>
             <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1itf9q24k1mmd14ps18b991fjkq15.jpg" alt="Portada del libro Cenizas: Mi Vida Después del Opus Dei" class="rounded-lg shadow-2xl w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1itf9q24k1mmd14ps18b991fjkq15.jpg" alt="Portada del libro Cenizas: Mi vida después del Opus Dei" class="rounded-lg shadow-2xl w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
             </div>
         </section>
 
-        <!-- Video Review Section -->
-        <section id="video-resena" class="py-20 bg-gray-50">
+        <!-- Multimedia Content Section -->
+        <section id="multimedia-content" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Mira una Reseña en Video</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Escucha de primera mano lo que nuestro autor tiene que decir sobre este viaje transformador. Una breve introducción a lo que encontrarás en "Cenizas".</p>
-                <div class="video-container rounded-lg shadow-xl overflow-hidden">
-                    <iframe src="https://app.heygen.com/embeds/33231d99307948309f103f6d997a9191" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Explora contenido multimedia</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Aquí podrás encontrar un video con la reseña del libro y un fragmento del primer capítulo en audio. Sumérgete en la experiencia de "Cenizas" antes de leerlo.</p>
+
+                <!-- Video Review Section -->
+                <div class="py-10 bg-gray-50 rounded-lg shadow-inner mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#2C3E50] mb-4">Mira una reseña en video</h3>
+                    <p class="text-md text-gray-600 max-w-2xl mx-auto mb-8">Escucha de primera mano lo que nuestro autor tiene que decir sobre este viaje transformador.</p>
+                    <div class="video-container rounded-lg shadow-xl overflow-hidden">
+                        <iframe src="https://app.heygen.com/embeds/33231d99307948309f103f6d997a9191" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-restricted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Audio Chapter Section -->
+                <div class="py-10 bg-white rounded-lg shadow-inner">
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#2C3E50] mb-4">Escucha el capítulo 1 completo</h3>
+                    <p class="text-md text-gray-600 max-w-2xl mx-auto mb-8">Debido a restricciones de seguridad en algunos navegadores, el reproductor de audio puede no mostrarse directamente aquí. Puedes escuchar el capítulo completo haciendo clic en el botón a continuación:</p>
+                    <a href="https://soundcloud.com/morispolanco/cap-1" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#388E3C] mt-4">
+                        Ir a la pista de SoundCloud
+                    </a>
                 </div>
             </div>
         </section>
@@ -105,7 +127,7 @@
         <!-- Benefits Section -->
         <section id="beneficios" class="bg-white py-20">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Un Camino Hacia Adelante</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Un camino hacia adelante</h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Este libro no es solo una historia, es un espejo y un mapa. En sus páginas encontrarás las herramientas y la compañía que necesitas para tu propio viaje de reconstrucción.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Benefit 1 -->
@@ -190,13 +212,18 @@
         </section>
 
         <!-- Final CTA Section -->
-        <section class="py-24 bg-gray-100">
+        <section id="compra-opciones" class="py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Da el primer paso hacia tu sanación.</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">No tienes que seguir caminando en soledad. Tu historia merece ser escuchada y tu futuro merece ser construido con esperanza y libertad.</p>
-                <a href="https://payhip.com/b/r8zOE" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold text-xl py-4 px-10 rounded-lg shadow-xl hover:bg-[#388E3C]">
-                    Comprar mi copia de "Cenizas"
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://payhip.com/b/r8zOE" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold text-xl py-4 px-10 rounded-lg shadow-xl hover:bg-[#388E3C]">
+                        Comprar mi copia directamente
+                    </a>
+                    <a href="https://a.co/d/aeUG16R" target="_blank" class="cta-button inline-block bg-[#FF9900] text-white font-bold text-xl py-4 px-10 rounded-lg shadow-xl hover:bg-[#E68A00]">
+                        Comprar en Amazon
+                    </a>
+                </div>
                 <p class="mt-8 text-gray-600">Garantía de satisfacción: Si este libro no resuena contigo en tu camino de sanación, te devolvemos tu dinero.</p>
             </div>
         </section>
