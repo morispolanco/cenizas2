@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cenizas: Mi Vida Después del Opus Dei - Por Alberto Barrera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals & Hopeful Green -->
+    <!-- Application Structure Plan: Se ha diseñado una estructura de landing page lineal y narrativa. Comienza con una sección 'hero' de alto impacto para captar la atención y presentar el libro, seguida de secciones que validan los sentimientos del lector, presentan los beneficios del libro como solución, ofrecen prueba social mediante testimonios y resuelven dudas con un FAQ interactivo. Cada sección conduce lógicamente a la siguiente, construyendo un caso convincente que culmina en una llamada a la acción final, optimizando así el flujo del usuario hacia el objetivo de conversión (la compra). -->
+    <!-- Visualization & Content Choices: La información del reporte se ha estructurado en componentes de texto e imagen. El visual principal es la portada del libro, que comunica el tema central. Los beneficios se presentan en tarjetas para facilitar la lectura. Los testimonios se muestran como citas destacadas para generar confianza. Un acordeón de preguntas frecuentes (FAQ) interactivo (usando HTML <details>) resuelve objeciones sin sobrecargar la página. El objetivo es informar, persuadir y generar confianza de manera fluida y empática. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+        }
+        .cta-button {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow-down {
+            transform: rotate(180deg);
+        }
+        .arrow-down {
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF8] text-[#3D3D3D]">
+
+    <!-- Header & Navigation -->
+    <header class="bg-[#FDFBF8]/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h3 class="text-xl font-bold text-[#2C3E50]">Cenizas</h3>
+            <div class="hidden md:flex space-x-8">
+                <a href="#beneficios" class="text-gray-600 hover:text-[#2E7D32]">Beneficios</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-[#2E7D32]">Testimonios</a>
+                <a href="#faq" class="text-gray-600 hover:text-[#2E7D32]">Preguntas</a>
+            </div>
+            <a href="https://payhip.com/b/r8zOE" target="_blank" class="hidden md:inline-block cta-button bg-[#2E7D32] text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-[#388E3C]">
+                Comprar Ahora
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#2C3E50] mb-4 leading-tight">Cenizas: Mi Vida Después del Opus Dei</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">Si las dudas o la desilusión han consumido tu fe y te han dejado con cicatrices, no estás solo. Descubre una historia inspiradora sobre cómo renacer, encontrar paz y redefinir tu camino espiritual.</p>
+                <a href="https://payhip.com/b/r8zOE" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold text-lg py-4 px-8 rounded-lg shadow-xl hover:bg-[#388E3C]">
+                    Sí, ¡Quiero Mi Copia y Sanar!
+                </a>
+                <p class="text-sm text-gray-500 mt-4">Compra segura a través de Payhip.</p>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1itf9q24k1mmd14ps18b991fjkq15.jpg" alt="Portada del libro Cenizas: Mi Vida Después del Opus Dei" class="rounded-lg shadow-2xl w-full max-w-sm transform hover:scale-105 transition-transform duration-300">
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="beneficios" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Un Camino Hacia Adelante</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">Este libro no es solo una historia, es un espejo y un mapa. En sus páginas encontrarás las herramientas y la compañía que necesitas para tu propio viaje de reconstrucción.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="bg-[#FDFBF8] p-8 rounded-lg shadow-md text-left">
+                        <div class="text-4xl mb-4 text-[#2E7D32]">🤝</div>
+                        <h3 class="text-xl font-bold mb-2">Valida tus sentimientos</h3>
+                        <p class="text-gray-600">Descubre que tu confusión, dolor o ira son reacciones válidas. No estás solo en esto; tus experiencias tienen un eco.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="bg-[#FDFBF8] p-8 rounded-lg shadow-md text-left">
+                        <div class="text-4xl mb-4 text-[#2E7D32]">🗣️</div>
+                        <h3 class="text-xl font-bold mb-2">Encuentra tu lenguaje</h3>
+                        <p class="text-gray-600">Obtén las palabras y conceptos para articular lo que has vivido, ayudándote a procesarlo y a explicarlo a otros con claridad.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="bg-[#FDFBF8] p-8 rounded-lg shadow-md text-left">
+                        <div class="text-4xl mb-4 text-[#2E7D32]">🗺️</div>
+                        <h3 class="text-xl font-bold mb-2">Vislumbra un camino</h3>
+                        <p class="text-gray-600">Inspírate con una historia real de reconstrucción personal y emocional fuera de estructuras rígidas y limitantes.</p>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div class="bg-[#FDFBF8] p-8 rounded-lg shadow-md text-left">
+                        <div class="text-4xl mb-4 text-[#2E7D32]">🌱</div>
+                        <h3 class="text-xl font-bold mb-2">Descubre la resiliencia</h3>
+                        <p class="text-gray-600">Aprende cómo la adversidad puede transformarse en fortaleza, y cómo el dolor puede ser el catalizador para una libertad auténtica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonios" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2C3E50] mb-4">Lo que dicen los lectores</h2>
+                 <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12 text-center">La prueba más poderosa de que no estás solo es escuchar a quienes ya han recorrido un camino similar. Sus voces son un testimonio del poder sanador de compartir nuestras historias.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-8 shadow-lg border-l-4 border-[#2E7D32]">
+                        <p class="text-gray-600 italic mb-4">"Este libro fue la voz que no sabía que necesitaba. Me hizo sentir comprendida y menos sola."</p>
+                        <p class="font-bold text-right">- María G.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-8 shadow-lg border-l-4 border-[#2E7D32]">
+                        <p class="text-gray-600 italic mb-4">"Finalmente encontré las palabras para entender y procesar años de confusión. Un faro de luz en la oscuridad."</p>
+                        <p class="font-bold text-right">- Juan R.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-8 shadow-lg border-l-4 border-[#2E7D32]">
+                        <p class="font-bold text-right italic mb-4">"Una historia desgarradora y a la vez profundamente inspiradora. Me dio la valentía para empezar mi propio camino de sanación."</p>
+                        <p class="font-bold text-right">- Sofía P.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="bg-white py-20">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2C3E50] mb-4">¿Tienes dudas?</h2>
+                <p class="text-lg text-gray-600 text-center mb-12">Es normal tener preguntas antes de dar un paso tan personal. Aquí respondemos a algunas de las más comunes para que puedas tomar tu decisión con total confianza.</p>
+                <div class="space-y-4">
+                    <details class="bg-[#FDFBF8] p-6 rounded-lg shadow-sm">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            ¿Es este libro solo para ex-miembros del Opus Dei?
+                            <span class="arrow-down text-[#2E7D32]">▼</span>
+                        </summary>
+                        <p class="text-gray-600 mt-4">No. Aunque la historia nace de una experiencia concreta, los temas de trauma religioso y la búsqueda de identidad y la sanación espiritual son universales y resonarán con cualquiera que haya cuestionado su fe o se haya sentido atrapado en una estructura dogmática.</p>
+                    </details>
+                    <details class="bg-[#FDFBF8] p-6 rounded-lg shadow-sm">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            ¿Qué tipo de sanación puedo esperar encontrar?
+                            <span class="arrow-down text-[#2E7D32]">▼</span>
+                        </summary>
+                        <p class="text-gray-600 mt-4">Este libro ofrece sanación a través del entendimiento emocional y la validación. Te brinda un marco para comprender tus experiencias y te empodera para iniciar tu propio y único camino de reconstrucción espiritual y personal.</p>
+                    </details>
+                    <details class="bg-[#FDFBF8] p-6 rounded-lg shadow-sm">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            ¿Es un libro de crítica o de crecimiento personal?
+                            <span class="arrow-down text-[#2E7D32]">▼</span>
+                        </summary>
+                        <p class="text-gray-600 mt-4">Ambas cosas. Si bien aborda con honestidad los aspectos críticos de la experiencia, su enfoque principal no es la denuncia, sino la transformación y el empoderamiento personal que pueden surgir de las cenizas de una fe rota.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-24 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">Da el primer paso hacia tu sanación.</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">No tienes que seguir caminando en soledad. Tu historia merece ser escuchada y tu futuro merece ser construido con esperanza y libertad.</p>
+                <a href="https://payhip.com/b/r8zOE" target="_blank" class="cta-button inline-block bg-[#2E7D32] text-white font-bold text-xl py-4 px-10 rounded-lg shadow-xl hover:bg-[#388E3C]">
+                    Comprar mi copia de "Cenizas"
+                </a>
+                <p class="mt-8 text-gray-600">Garantía de satisfacción: Si este libro no resuena contigo en tu camino de sanación, te devolvemos tu dinero.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#2C3E50] text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Alberto Barrera. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Un viaje de mil kilómetros comienza con un solo paso.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let targetId = this.getAttribute('href');
+                    let targetElement = document.querySelector(targetId);
+                    
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
